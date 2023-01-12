@@ -84,3 +84,54 @@ let userName = {
 for(let x in userName) {
     console.log(userName[x]);
 }
+
+const Object = {
+    rocket: '🚀',
+    home: '🏡'
+}
+
+const obj1 = {
+    rocket: '🚀',
+    fuel: 2,
+    config: {
+        name: 'mars'
+    }
+}
+
+obj1.fuel = 200;
+obj1['year'] = 2000;
+
+// part2
+// const obj2 = new Object() //constructor
+// obj2.redbook = '📕'
+// obj2.bluebook = '📘'
+// obj2.myValue = '1 blue book'
+
+// console.log(obj2);
+
+// part 3
+// const power = {
+//     fly: true,
+//     cordinate: Math.random() + 2
+// }
+
+// const obj3 = Object.create(power);
+// console.log(obj3);
+// console.log(obj3.cordinate);
+
+// part 5
+const obj5 = {
+    comics : 'marvel',
+    pen : '',
+    printComic: function() {
+        this.pen += '📝';
+        console.log(this);
+    },
+
+    // printComic: () => {
+    //     this.pen += '📝'; //this is not work 
+    //     console.log(this);
+    // },
+}
+
+console.log(obj5.printComic().printComic().printComic());
