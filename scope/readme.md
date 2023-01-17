@@ -20,3 +20,8 @@ So we know that JS is not interpreted, it definetely is hybrid i.e compiled + in
 2> Or it will be used to retrives a values i.e it will be used as source.
 
 What JS does is, it will start the parsing phase. Outside everything it maintains global scope, but the moment it goes inside a function it start maintaing scope of that function also.
+
+# Autoglobals [Stack overflow](https://stackoverflow.com/questions/53330616/please-explain-automatically-global-in-javascript)
+In JS if we keep on seauly scope of a variable in outer scopes & no where find it, we automatically consider it in global scope. this happens during execution phase.
+
+-> Autoglobal only works when target reference & not source.
