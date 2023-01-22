@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- document, windows, id class , tag, queryselector -->
+    <!-- alert, condfirm, prompt, innerHTML and innerText -->
+    <h1>Hello Javascript Bootcampt</h1>
+    <ul>
+
+    </ul>
+    <button onclick="maths()" id="fsjs2"> Submit</button>
+    <p id="js"></p>
+    <script>
+        // insert inner HTML
+        const list = `
+            <li>Rohit</li>
+            <li>Manas</li>
+            <li>Binod</li>
+            <li>Kunal</li>
+            <li>Bisal</li>
+        `;
+        const ul = document.querySelector("ul")
+        ul.innerHTML = list;
+
+        // Create Element on Screen
+        let title = document.createElement("h1")
+        title.className = "title";
+        title.style.fontSize = "25px";
+        title.style.color = "green";
+        title.textContent = "Creating New Element in DOM Day 2";
+        console.log(title)
+        document.body.appendChild(title)
+        // Remove Child => Assignment
+
+        // For loop
+        for (let i = 0; i < 3; i++) {
+            let pra = document.createElement("p")
+            pra.className = "FSJS";
+            pra.style.fontSize = "16px"
+            console.log(pra)
+            pra.textContent = i;
+            document.body.appendChild(pra)
+
+        }
+        function maths() {
+            let value = prompt("Solve This 50 - 30");
+            if (value == 20) {
+                document.getElementById("js").innerText = "Success Redirect";
+                document.getElementById("fsjs2").style.backgroundColor = "Green"
+            }
+            else {
+                document.getElementById("js").innerText = "Fail Try Again";
+                document.getElementById("fsjs2").style.backgroundColor = "Red"
+            }
+        }
+
+
+    </script>
+    <!-- <h1 class="title" style="font-size: 25px; color: green;"></h1> -->
+</body>
+
+</html>
